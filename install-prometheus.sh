@@ -65,6 +65,8 @@ ExecStart=/usr/local/bin/prometheus \\
   --storage.tsdb.path=/var/lib/prometheus/ \\
   --web.console.templates=/etc/prometheus/consoles \\
   --web.console.libraries=/etc/prometheus/console_libraries
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
